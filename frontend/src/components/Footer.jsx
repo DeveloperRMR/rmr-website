@@ -244,6 +244,16 @@ function Footer() {
               </Link>
             </div>
           </div>
+
+          {/* Website Creator Signature */}
+          <div className="mt-6 pt-6 border-t border-gray-800/50 text-center">
+            <p className="text-gray-600 text-xs">
+              Website created by{' '}
+              <span className="text-trucking-blue font-semibold hover:text-trucking-orange transition-colors">
+                ABC LEGACY LLC
+              </span>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
