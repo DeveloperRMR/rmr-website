@@ -23,31 +23,14 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <div>
-            <div className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-trucking-blue to-trucking-orange rounded-lg flex items-center justify-center">
-                <svg
-                  className="w-6 h-6 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 10V3L4 14h7v7l9-11h-7z"
-                  />
-                </svg>
-              </div>
-              <div>
-                <h3 className="text-lg font-display font-bold text-white">
-                  RMR TRANSPORTATION
-                </h3>
-                <p className="text-xs text-gray-400">LLC</p>
-              </div>
+            <div className="mb-4">
+              <h3 className="text-xl font-display font-bold text-white">
+                RMR TRANSPORTATION
+              </h3>
+              <p className="text-xs text-gray-400 tracking-wider">LLC</p>
             </div>
             <p className="text-gray-400 text-sm mb-4">
-              Moving America Forward, One Load at a Time.
+              Professional Freight Solutions Nationwide
             </p>
             <p className="text-gray-500 text-xs">
               <strong className="text-gray-400">USDOT:</strong> 3590337
