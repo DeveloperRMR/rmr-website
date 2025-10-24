@@ -85,16 +85,12 @@ function Home() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image - American Semi Truck */}
-        <div
-          className="absolute inset-0 z-0"
-          style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1519003722824-194d4455a60c?q=80&w=2076&auto=format&fit=crop)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        >
-          <div className="hero-overlay"></div>
+        {/* Simple Gradient Background */}
+        <div className="absolute inset-0 z-0 bg-gradient-to-br from-trucking-dark via-trucking-gray to-trucking-dark">
+          {/* Animated overlay pattern */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute inset-0 bg-gradient-to-tr from-trucking-blue/20 to-trucking-orange/20"></div>
+          </div>
         </div>
 
         {/* Content */}
