@@ -9,7 +9,7 @@ A modern, professional website for **RMR TRANSPORTATION LLC** - a semi-truck fre
 - **Phone:** +1 (573) 415-1555
 - **Address:** 5203 Oakleaf Dr, Kansas City, Missouri 64129 Apt 3
 - **USDOT:** 3590337
-- **Slogan:** *"Moving America Forward, One Load at a Time."*
+- **Tagline:** *"Your Trusted Partner in Freight Solutions"*
 
 ## 🛠️ Technology Stack
 
@@ -36,31 +36,35 @@ rmr-website/
 │   ├── src/
 │   │   ├── pages/            # Page components
 │   │   │   ├── Home.jsx      # Landing page with hero, services, contact
-│   │   │   ├── Register.jsx  # SMS registration form
-│   │   │   ├── PrivacyPolicy.jsx
-│   │   │   └── SmsTerms.jsx
+│   │   │   ├── About.jsx     # Company story, values, team
+│   │   │   ├── Services.jsx  # Detailed service offerings
+│   │   │   ├── Contact.jsx   # Contact form and information
+│   │   │   ├── PrivacyPolicy.jsx  # Privacy policy (footer link)
+│   │   │   └── SmsTerms.jsx  # SMS terms (footer link)
 │   │   ├── components/       # Reusable components
 │   │   │   ├── Navbar.jsx    # Navigation bar
-│   │   │   └── Footer.jsx    # Site footer
+│   │   │   └── Footer.jsx    # Site footer with legal links
 │   │   ├── App.jsx           # Main app component with routing
 │   │   ├── main.jsx          # React entry point
 │   │   └── index.css         # Global styles and Tailwind
 │   ├── index.html
 │   ├── package.json
 │   ├── tailwind.config.js
-│   ├── postcss.config.js
+│   ├── postcss.config.cjs
 │   └── vite.config.js
 │
 ├── backend/                  # Node.js backend API
 │   ├── index.js              # Express server and API routes
 │   ├── database.js           # SQLite database setup
 │   ├── helpers/
-│   │   └── ringcentral.js    # RingCentral SMS integration
+│   │   └── ringcentral.js    # RingCentral SMS integration (optional)
 │   ├── data/
 │   │   └── registrations.db  # SQLite database (auto-created)
 │   └── package.json
 │
+├── .gitignore                # Git ignore rules
 ├── .env.example              # Example environment variables
+├── SETUP_GUIDE.md            # Detailed setup instructions
 └── README.md                 # This file
 ```
 
@@ -158,62 +162,69 @@ Open your browser to `http://localhost:5173`
 
 ## 📱 Features
 
-### Main Pages
+### Main Navigation Pages
 
 ### 1. **Home Page**
-- Hero section with trucking imagery and company slogan
-- About section highlighting safety, reliability, and nationwide service
-- Services section showcasing 4 key offerings:
+- Professional hero section with gradient background
+- Company tagline and call-to-action buttons
+- Services overview with 4 key offerings:
   - Freight Dispatching
   - Truckload Transportation
   - Owner-Operator Support
   - 24/7 Logistics Coordination
-- Contact form with phone, email, and address
-- Company statistics and achievements
+- Company statistics (24/7 operations, 50 states, 100% DOT compliant)
+- Contact form with email integration
 - Responsive design optimized for mobile and desktop
 
 ### 2. **About Page**
 - Company story and mission statement
-- Core values (Safety, Reliability, Driver-Focus, Integrity)
-- Team structure and operations
+- Core values with professional SVG icons:
+  - Safety First
+  - Reliability & Trust
+  - Driver-Focused Approach
+  - Integrity & Transparency
+- Team structure and operations overview
+- Stats showcase (10+ years, 5000+ loads, 48 states, 99.8% on-time delivery)
 - DOT compliance and safety program
-- Certifications and service coverage
-- Professional stats showcase
+- Why choose us section
 
 ### 3. **Services Page**
-- Detailed core services (Freight Dispatching, FTL, Owner-Operator Support, 24/7 Logistics)
-- Additional services (Cross-docking, Route Planning, Back Office Support, etc.)
-- Why choose us section with competitive advantages
-- Service coverage across all 48 contiguous states
-- CTA sections for quotes and contact
+- Comprehensive service listings with feature details
+- Core services section with professional icons
+- Additional services (Cross-docking, Route Planning, Back Office, etc.)
+- Competitive advantages and differentiators
+- Service coverage visualization
+- Multiple CTAs for quote requests
 
 ### 4. **Contact Page**
-- Multiple contact methods (Phone, Email, Office location)
-- Comprehensive contact form with company field
-- Business hours and emergency contact information
+- Multiple contact methods (Phone, Email, Office)
+- Full contact form with company field
+- Business hours and emergency contact
 - Google Maps integration for office location
-- "How Can We Help?" section with inquiry types
-- Quick response commitment
+- "How Can We Help?" inquiry types
+- Professional SVG icons throughout
 
-### Legal Pages (Footer Only)
+### Legal & Compliance (Footer Links Only)
 
 ### 5. **Privacy Policy**
 - Comprehensive privacy information
-- GDPR and CCPA compliance sections
-- Data collection and usage details
-- SMS communication policies
-- User rights and opt-out procedures
-- Last updated date
+- TCPA and CCPA compliance
+- Data collection and usage policies
+- SMS communication terms
+- User rights and contact information
+- "No Third-Party Marketing" clause
+- Policy acceptance section
 
-### 6. **SMS Terms & Conditions** (Optional Feature)
+### 6. **SMS Terms & Conditions**
 - TCPA compliance details
-- Message frequency and timing information
-- Cost and carrier charge disclaimers
-- Opt-out instructions (STOP, HELP commands)
-- Service description and limitations
-- Contact information for support
+- Message frequency and cost information
+- Opt-out instructions (STOP/HELP)
+- Carrier disclaimers
+- Service limitations
+- "No Third-Party Marketing" guarantee
+- Contact support information
 
-**Note:** SMS registration is an optional feature. The website works perfectly as a professional logistics company site without it.
+**Note:** SMS functionality is available via backend API but not actively promoted on the main site. The focus is on professional logistics services.
 
 ### 7. **Backend API**
 
@@ -229,12 +240,13 @@ Open your browser to `http://localhost:5173`
 - Validates and logs contact requests
 - Used on Home and Contact pages
 
-**POST /api/register** (Optional)
-- Register for SMS notifications
+**POST /api/register** (Optional - Backend Only)
+- SMS notification registration endpoint
 - Body: `{ name, email, phone, consent }`
 - Validates input and prevents duplicates
 - Sends welcome SMS via RingCentral
 - Stores registration in SQLite
+- **Note:** Not actively used on frontend, available for future features
 
 **GET /api/admin/registrations**
 - View all SMS registrations (protected)
@@ -243,14 +255,20 @@ Open your browser to `http://localhost:5173`
 
 ## 🎨 Design
 
-- **Dark Theme:** Professional trucking aesthetic with dark backgrounds
+- **Professional Theme:** Clean, modern trucking aesthetic
 - **Color Palette:**
   - Primary Blue: `#3B82F6`
   - Orange Accent: `#F97316`
   - Dark Backgrounds: `#0F172A`, `#1E293B`, `#334155`
-- **Typography:** Inter and Poppins fonts
+  - Gradients: Blue to orange for visual appeal
+- **Typography:** 
+  - Body: Inter font family
+  - Headings: Poppins font family (display)
+- **Icons:** Professional SVG icons throughout (no emojis)
 - **Animations:** Smooth fade-in, slide-up, and hover effects
 - **Responsive:** Mobile-first design with Tailwind breakpoints
+- **Logo:** Clean text-only logo without icon
+- **Footer:** Includes ABC LEGACY LLC creator signature
 
 ## 📦 Deployment
 
@@ -315,11 +333,11 @@ Open your browser to `http://localhost:5173`
 - **SQL Injection:** Using parameterized queries with SQLite
 - **HTTPS:** Always use HTTPS in production
 
-## 📞 SMS Integration
+## 📞 SMS Integration (Optional Backend Feature)
 
-The site uses **RingCentral** for SMS delivery:
+The backend includes **RingCentral** SMS capability for future features:
 
-1. **Sign up** at [RingCentral Developers](https://developers.ringcentral.com)
+1. **Sign up** at [RingCentral Developers](https://developers.ringcentral.com) if needed
 2. **Create an app** and get credentials
 3. **Add credentials** to `.env`
 4. **SMS Features:**
@@ -327,6 +345,8 @@ The site uses **RingCentral** for SMS delivery:
    - STOP/HELP keyword support
    - Phone number validation
    - Duplicate prevention
+
+**Note:** SMS features are not currently used on the frontend but remain available via API for potential future features like automated updates or notifications.
 
 ## 🧪 Testing
 
@@ -354,11 +374,11 @@ curl http://localhost:4000/api/admin/registrations \
 
 ### Frontend Testing
 - Open `http://localhost:5173` in browser
-- Test all navigation links
-- Submit registration form
+- Test all navigation links (Home, About, Services, Contact)
 - Submit contact form
 - Test mobile responsiveness (DevTools)
-- Verify SMS delivery (check your phone)
+- Verify legal pages in footer (Privacy Policy, SMS Terms)
+- Check professional icons and styling
 
 ## 🐛 Troubleshooting
 
@@ -387,6 +407,8 @@ curl http://localhost:4000/api/admin/registrations \
 
 © 2025 RMR TRANSPORTATION LLC. All Rights Reserved.
 
+**Website created by ABC LEGACY LLC**
+
 ## 🤝 Support
 
 For technical support or inquiries:
@@ -396,4 +418,4 @@ For technical support or inquiries:
 
 ---
 
-**Built with ❤️ for professional trucking and logistics**
+**Built with 💼 for professional freight and logistics services**
