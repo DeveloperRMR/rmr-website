@@ -1,10 +1,12 @@
 # Dependencies
 node_modules/
 package-lock.json
+yarn.lock
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+lerna-debug.log*
 
 # Environment files
 .env
@@ -12,19 +14,23 @@ pnpm-debug.log*
 .env.development.local
 .env.test.local
 .env.production.local
+*.env
 
 # Build outputs
 dist/
+dist-ssr/
 build/
 .cache/
+*.local
 
 # Database
 *.db
 *.sqlite
 *.sqlite3
 backend/data/*.db
+backend/data/*.sqlite*
 
-# IDE
+# IDE & Editors
 .vscode/*
 !.vscode/extensions.json
 !.vscode/settings.json
@@ -33,20 +39,56 @@ backend/data/*.db
 *.swo
 *~
 .DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
 # Logs
 logs/
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
 # Testing
 coverage/
 .nyc_output/
+*.lcov
+.jest/
 
-# Misc
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
 .Trash-*
 Thumbs.db
 ehthumbs.db
 Desktop.ini
+$RECYCLE.BIN/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*~
 
 # Vite
 .vite/
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# Production
+/build
+/dist
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

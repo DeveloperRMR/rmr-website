@@ -85,11 +85,11 @@ function Home() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
+        {/* Background Image - American Semi Truck */}
         <div
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=2070&auto=format&fit=crop)',
+            backgroundImage: 'url(https://images.unsplash.com/photo-1519003722824-194d4455a60c?q=80&w=2076&auto=format&fit=crop)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
