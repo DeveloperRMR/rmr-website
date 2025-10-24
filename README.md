@@ -1,7 +1,5 @@
 # RMR TRANSPORTATION LLC - Professional Trucking Website
 
-![RMR Transportation](https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=2070&auto=format&fit=crop)
-
 A modern, professional website for **RMR TRANSPORTATION LLC** - a semi-truck freight and logistics company operating across the United States.
 
 ## 🚛 Company Information
