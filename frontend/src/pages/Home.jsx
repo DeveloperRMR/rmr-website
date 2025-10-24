@@ -96,9 +96,9 @@ function Home() {
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-white mb-6 animate-fade-in">
-            Moving America Forward,
+            Reliable Freight Solutions
             <br />
-            <span className="text-gradient">One Load at a Time</span>
+            <span className="text-gradient">Delivering Excellence Nationwide</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto animate-slide-up">
             Professional semi-truck freight & logistics services delivering reliability and excellence across the United States.
