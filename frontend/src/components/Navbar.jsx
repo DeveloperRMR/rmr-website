@@ -20,6 +20,8 @@ function Navbar() {
     { name: 'About', path: '/about' },
     { name: 'Services', path: '/services' },
     { name: 'Contact', path: '/contact' },
+    { name: 'Privacy', path: '/privacy-policy' },
+    { name: 'SMS Terms', path: '/sms-terms' },
   ];
 
   const isActive = (path) => location.pathname === path;

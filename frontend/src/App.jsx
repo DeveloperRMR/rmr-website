@@ -21,6 +21,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/sms-terms" element={<SmsTerms />} />
+            <Route path="*" element={<Home />} />
           </Routes>
         </main>
         <Footer />
